@@ -105,6 +105,15 @@ main() {
 
   printf "${BLUE}All actions complete. \n\nIf you use Ubuntu, make sure you get the fill vim ('sudo apt-get install vim') \n\nFor the terminal, you should logout, then back in for everything to take effect.  -BV${NORMAL}\n\n"
 
+  if [[ $OSTYPE == 'darwin'* ]]; then
+    echo 'macOS detected...'
+    mkdir -p ~/.brewfiles
+    curl -fsSL http://vertigo-prime.github.io/cli/Brewfile > ~/.brewfiles/Brewfile
+    command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
+
+    brew bundle --file=~/.brewfiles/Brewfile
+  fi
 }
 
 main

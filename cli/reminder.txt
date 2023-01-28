@@ -1,0 +1,1 @@
+/bin/bash -c "$(curl -fsSL https://vertigo-prime.github.io/cli/profile.sh)"

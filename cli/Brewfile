@@ -1,0 +1,6 @@
+brew "awscli"
+brew "jq"
+brew "pyenv"
+brew "rbenv"
+brew "stunnel"
+brew "yamllint"

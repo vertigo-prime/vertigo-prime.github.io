@@ -1,5 +1,6 @@
 brew "awscli"
 brew "jq"
+brew "node"
 brew "pyenv"
 brew "rbenv"
 brew "stunnel"
